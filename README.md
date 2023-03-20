@@ -73,7 +73,6 @@ After you're finished please remove all the comments and instructions!
 
 ### Key Features <a name="key-features"></a>
 
-
 - **[Use JavaScript to add and remove a list of books]**
 - **[Use wireframe to modify to look of the page]**
 - **[Build a working navigation system]**
@@ -141,6 +140,12 @@ To run tests, run the following command:
 - Twitter: [@yegonbrian8](https://twitter.com/yegonbrian8)
 - LinkedIn: [Brian Yegon](https://www.linkedin.com/in/brian-yegon-0717a1241/)
 
+👤 Fatihah Oduwole
+
+- GitHub: [@yegonkimutai](https://github.com/jeddaa)
+- Twitter: [@yegonbrian8](https://twitter.com/_jeddaah)
+- LinkedIn: [Brian Yegon](https://www.linkedin.com/in/fatihahoduwole)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
@@ -157,7 +162,6 @@ To run tests, run the following command:
 ## 🤝 Contributing <a name="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
