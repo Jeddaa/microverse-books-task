@@ -18,7 +18,7 @@ function bookList(books) {
     book.innerHTML = `
         <p>${detail.title}</p>
         <p>${detail.author}</p>
-        <button id ="close">Remove</button>
+        <button class="close">Remove</button>
         <br>
         <hr>
         `;
@@ -36,17 +36,21 @@ function addBooks() {
     element.innerHTML = `
       <p>${title}</p>
         <p>${author}</p>
-        <button id ="close">Remove</button>
+        <button class="close">Remove</button>
         <br>
         <hr>
     `;
     container.appendChild(element);
-    title = '';
-    author = '';
   }
-  title = '';
-  author = '';
+  const closeBtn = document.querySelectorAll('.close');
+  for(let i = 0; i < closeBtn.length; i++) {
+    closeBtn[i].addEventListener('click', () => {
+        closeBtn[i].parentElement.style.display = 'none';
+        closeBtn[i].parentElement.remove();
+    });
 }
+}
+
 
 addBtn.addEventListener('click', addBooks);
 bookList(books);
