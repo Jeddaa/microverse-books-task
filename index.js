@@ -29,8 +29,8 @@ function bookList(books) {
 }
 
 function addBooks() {
-  let title = document.querySelector('#title').value;
-  let author = document.querySelector('#author').value;
+  const title = document.querySelector('#title').value;
+  const author = document.querySelector('#author').value;
   // let data = { title: title, author: author };
   // books.push(data);
   if (title != null && author != null) {
@@ -45,30 +45,29 @@ function addBooks() {
     container.appendChild(element);
   }
   const closeBtn = document.querySelectorAll('.close');
-  for(let i = 0; i < closeBtn.length; i++) {
+  for (let i = 0; i < closeBtn.length; i += 1) {
     closeBtn[i].addEventListener('click', () => {
-        closeBtn[i].parentElement.style.display = 'none';
-        closeBtn[i].parentElement.remove();
+      closeBtn[i].parentElement.style.display = 'none';
+      closeBtn[i].parentElement.remove();
     });
-}
+  }
 }
 
 function saveInfo() {
-    const userInfo = JSON.stringify({
-      title: title.value,
-      author: author.value,
-    });
-    localStorage.setItem('userInfo', userInfo);
-  }
-  
-  title.addEventListener('input', saveInfo);
-  author.addEventListener('input', saveInfo);
-  
-  const userInfo = localStorage.getItem('userInfo');
-  
-  title.value = JSON.parse(userInfo)?.title ? JSON.parse(userInfo).title : '';
-  author.value = JSON.parse(userInfo)?.author ? JSON.parse(userInfo).author : '';
+  const userInfo = JSON.stringify({
+    title: title.value,
+    author: author.value,
+  });
+  localStorage.setItem('userInfo', userInfo);
+}
 
+title.addEventListener('input', saveInfo);
+author.addEventListener('input', saveInfo);
+
+const userInfo = localStorage.getItem('userInfo');
+
+title.value = JSON.parse(userInfo)?.title ? JSON.parse(userInfo).title : '';
+author.value = JSON.parse(userInfo)?.author ? JSON.parse(userInfo).author : '';
 
 addBtn.addEventListener('click', addBooks);
 bookList(books);
