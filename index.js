@@ -1,5 +1,7 @@
 const container = document.querySelector('#container');
 const addBtn = document.querySelector('#addBtn');
+const title = document.getElementById('title');
+const author = document.getElementById('author');
 
 const books = [
   {
@@ -50,6 +52,22 @@ function addBooks() {
     });
 }
 }
+
+function saveInfo() {
+    const userInfo = JSON.stringify({
+      title: title.value,
+      author: author.value,
+    });
+    localStorage.setItem('userInfo', userInfo);
+  }
+  
+  title.addEventListener('input', saveInfo);
+  author.addEventListener('input', saveInfo);
+  
+  const userInfo = localStorage.getItem('userInfo');
+  
+  title.value = JSON.parse(userInfo)?.title ? JSON.parse(userInfo).title : '';
+  author.value = JSON.parse(userInfo)?.author ? JSON.parse(userInfo).author : '';
 
 
 addBtn.addEventListener('click', addBooks);
