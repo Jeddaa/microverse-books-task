@@ -1,72 +1,67 @@
-const inputTitle = document.querySelector('.input-title');
-const inputAuthor = document.querySelector('.input-author');
+const title = document.querySelector('.title');
+const author = document.querySelector('.author');
+const bookList = document.querySelector('.bookList');
 const form = document.querySelector('.form');
 
-const bookList = document.querySelector('.books-list');
-
 let books = [];
+const savedBooks = localStorage.getItem('books');
 
-const reterevedBooks = localStorage.getItem('books');
-
-function renderBooks() {
+function saveBooks() {
   let finalHtml = '';
-
   books.forEach((book) => {
-    const htmlToInsert = `
-      <div>
+    const eachHtml = `
+    <div>
         <p>${book.title}</p>
         <p>${book.author}</p>
-        <button id="remove-${book.id}"> Remove </button>
+        <button id="close-${book.id}"> Remove </button>
       </div>
       <hr>
     `;
-    finalHtml += htmlToInsert;
+    finalHtml += eachHtml;
   });
   bookList.innerHTML = finalHtml;
 }
 
-function setRemoveEventListeners() {
+function removeBook() {
   books.forEach((book) => {
-    const removeBtn = document.getElementById(`remove-${book.id}`);
-    removeBtn.addEventListener('click', () => {
-      books = books.filter((element) => element.id !== book.id);
+    const removebtn = document.getElementById(`close-${book.id}`);
+    removebtn.addEventListener('click', () => {
+      books = books.filter((item) => item.id !== book.id);
 
-      localStorage.setItem('books', JSON.stringify(books));
-      renderBooks();
-      setRemoveEventListeners();
+      localStorage.setItem('book', JSON.stringify(books));
+      saveBooks();
+      removeBook();
     });
   });
 }
 
-if (reterevedBooks) {
-  books.push(...JSON.parse(reterevedBooks));
-  renderBooks();
-  setRemoveEventListeners();
+if (savedBooks) {
+  books.push(...JSON.parse(savedBooks));
+  saveBooks();
+  removeBook();
 }
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
-  if (inputTitle.value.length !== 0 && inputAuthor.value.length !== 0) {
-    if (books.length !== 0) {
+  if (title.value !== 0 && author.value !== 0) {
+    if (books.length > 0) {
       books.push({
-        title: inputTitle.value,
-        author: inputAuthor.value,
+        title: title.value,
+        author: author.value,
         id: books[books.length - 1].id + 1,
       });
-      inputTitle.value = '';
-      inputAuthor.value = '';
     } else {
       books.push({
-        title: inputTitle.value,
-        author: inputAuthor.value,
+        title: title.value,
+        author: author.value,
         id: 1,
       });
-      inputTitle.value = '';
-      inputAuthor.value = '';
+      title.value = '';
+      author.value = '';
     }
 
     localStorage.setItem('books', JSON.stringify(books));
-    renderBooks();
-    setRemoveEventListeners();
+    saveBooks();
+    removeBook();
   }
 });
