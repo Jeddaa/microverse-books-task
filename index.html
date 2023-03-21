@@ -8,14 +8,20 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>Awesome books</h1>
-    <div id="container"></div>
-    <form action="">
-      <ul>
-        <li><input id="title" type="text" placeholder="Title" /></li>
-        <li><input id="author" type="text" placeholder="Author" /></li>
-        <li><button id="addBtn" type="button">Add</button></li>
-      </ul>
+    <section id="books">
+      <h1>Awesome Books</h1>
+      <div class="books-list"></div>
+    </section>
+    <form class="form" action="#">
+      <div>
+        <input class="input-title" type="text" placeholder="Title" />
+      </div>
+      <div>
+        <input class="input-author" type="text" placeholder="Author" />
+      </div>
+      <div>
+        <button type="submit">Add</button>
+      </div>
     </form>
     <script src="./index.js"></script>
   </body>
