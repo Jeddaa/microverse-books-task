@@ -55,8 +55,8 @@ class BookList {
       </div>
     `;
       finalHtml += eachHtml;
-    });
-    bookList.innerHTML = finalHtml;
+  });
+  bookList.innerHTML = finalHtml;
   }
 }
 
