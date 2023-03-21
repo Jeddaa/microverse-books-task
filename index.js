@@ -26,7 +26,7 @@ function removeBook() {
   books.forEach((book) => {
     const removebtn = document.getElementById(`close-${book.id}`);
     removebtn.addEventListener('click', () => {
-      books = books.filter((item) => item.id != book.id);
+      books = books.filter((item) => item.id !== book.id);
 
       localStorage.setItem('book', JSON.stringify(books));
       saveBooks();
@@ -43,7 +43,7 @@ if (savedBooks) {
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
-  if (title.value != 0 && author.value != 0) {
+  if (title.value !== 0 && author.value !== 0) {
     if (books.length > 0) {
       books.push({
         title: title.value,
