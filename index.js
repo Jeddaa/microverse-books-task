@@ -9,7 +9,7 @@ class BookList {
   }
 
   addBooks() {
-    if (title.value !== 0 && author.value !== 0) {
+    if (title.value !== '' && author.value !== '') {
       if (this.books.length > 0) {
         this.books.push({
           title: title.value,

@@ -8,13 +8,13 @@
 }
 
 .bookList {
-  border: 1px solid black;
+  border: 2px solid black;
 }
 
 .list {
   display: flex;
   justify-content: space-between;
-  background-color: darkgray;
+  background-color: #e5e5e5;
   font-family: 'Nunito', sans-serif;
 }
 
@@ -38,7 +38,7 @@
 .main-form input {
   width: 300px;
   height: 30px;
-  border: 1px solid black;
+  border: 2px solid black;
 }
 
 .main-form h2 {
