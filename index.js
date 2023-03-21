@@ -4,7 +4,9 @@ const form = document.querySelector('.form');
 
 const bookList = document.querySelector('.books-list');
 
-let books = [];
+class Books {
+    constructor(input, author) {}
+}
 
 const reterevedBooks = localStorage.getItem('books');
 
