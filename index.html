@@ -5,24 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./index.css" />
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
+    <title>Awesome books</title>
   </head>
   <body>
-    <section id="books">
-      <h1>Awesome Books</h1>
-      <div class="books-list"></div>
+    <section id="books" class="books">
+      <h1>All awesome Books</h1>
+      <div class="bookList"></div>
     </section>
-    <form class="form" action="#">
-      <div>
-        <input class="input-title" type="text" placeholder="Title" />
-      </div>
-      <div>
-        <input class="input-author" type="text" placeholder="Author" />
-      </div>
-      <div>
-        <button type="submit">Add</button>
-      </div>
-    </form>
+    <div class="main-form">
+      <form class="form" action="#">
+        <hr>
+        <h2>Add a new Book</h2>
+        <div>
+          <input class="title" type="text" placeholder="Title" />
+        </div>
+        <div>
+          <input class="author" type="text" placeholder="Author" />
+        </div>
+        <div class="add-btn">
+          <button type="submit">Add</button>
+        </div>
+      </form>
+    </div>
     <script src="./index.js"></script>
   </body>
 </html>
