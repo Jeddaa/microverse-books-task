@@ -168,3 +168,7 @@ form > div {
 .active {
   display: block;
 }
+
+.test {
+  color: red;
+}
