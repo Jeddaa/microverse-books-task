@@ -3,7 +3,7 @@ const author = document.querySelector('.author');
 const bookList = document.querySelector('.bookList');
 const form = document.querySelector('.form');
 const list = document.querySelector('.books');
-const cont = document.querySelector('.contact')
+const cont = document.querySelector('.contact');
 
 class BookList {
   constructor() {
@@ -76,8 +76,7 @@ form.addEventListener('submit', (e) => {
   allBooks.addBooks();
 });
 
-
-let formNav = document.querySelector('.form-menu');
+const formNav = document.querySelector('.form-menu');
 
 formNav.addEventListener('click', () => {
   form.classList.add('active');
@@ -85,7 +84,7 @@ formNav.addEventListener('click', () => {
   cont.classList.remove('active');
 });
 
-let listNav = document.querySelector('.list-menu');
+const listNav = document.querySelector('.list-menu');
 
 listNav.addEventListener('click', () => {
   list.classList.add('active');
@@ -93,7 +92,7 @@ listNav.addEventListener('click', () => {
   cont.classList.remove('active');
 });
 
-let contactNav = document.querySelector('.contact-menu');
+const contactNav = document.querySelector('.contact-menu');
 
 contactNav.addEventListener('click', () => {
   cont.classList.add('active');

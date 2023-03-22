@@ -1,4 +1,59 @@
-  /* List section */
+* {
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+}
+
+nav > a {
+  padding: 8px;
+  color: #000;
+}
+
+nav > ul > li {
+  display: flex;
+  list-style: none;
+  border-right: 2px solid #000;
+}
+
+nav > a,
+nav > ul > li > a {
+  text-decoration: none;
+  padding: 8px;
+  color: #000;
+  font-size: 18px;
+}
+
+nav > ul {
+  display: flex;
+  gap: 5px;
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid #000;
+}
+
+h6 {
+  position: absolute;
+  right: 10px;
+  margin: 5px 0 0;
+  font-size: 16px;
+}
+
+footer {
+  position: fixed;
+  bottom: 10px;
+  border: 2px solid #000;
+  width: 98vw;
+  margin: 0 auto;
+}
+
+footer > p {
+  padding-left: 30px;
+}
+
+/* List section */
 .books {
   display: none;
 }
@@ -32,13 +87,11 @@
   height: 30px;
   margin: 10px;
 }
-  /* Form Section */
+
+/* Form Section */
 .form {
   display: none;
-}
-
-.active {
-  display: block;
+  font-size: 16px;
 }
 
 .main-form {
@@ -46,6 +99,10 @@
   flex-direction: column;
   align-items: center;
   font-family: 'Nunito', sans-serif;
+}
+
+form > div {
+  margin-top: 1em;
 }
 
 .main-form > div {
@@ -73,11 +130,33 @@
   display: flex;
   justify-content: flex-end;
 }
-  /* Contact section */
+
+/* Contact section */
 .contact {
   display: none;
+  flex-direction: column;
+  margin: 3em 0;
 }
 
-.active {
-  display: block;
+.contact > h2 {
+  font-size: 28px;
+  padding-left: 10px;
+  text-align: center;
+}
+
+.contact > p {
+  font-size: 18px;
+  display: flex;
+  width: 60%;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
+
+.contact > ul {
+  font-size: 18px;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  margin: 10px auto;
 }
