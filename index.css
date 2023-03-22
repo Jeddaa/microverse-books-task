@@ -58,10 +58,6 @@ footer > p {
   display: none;
 }
 
-.active {
-  display: block;
-}
-
 .books h1 {
   text-align: center;
   font-family: 'Nunito', sans-serif;
@@ -159,4 +155,8 @@ form > div {
   display: flex;
   flex-direction: column;
   margin: 10px auto;
+}
+
+.active {
+  display: block;
 }
