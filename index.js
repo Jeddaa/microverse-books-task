@@ -2,6 +2,8 @@ const title = document.querySelector('.title');
 const author = document.querySelector('.author');
 const bookList = document.querySelector('.bookList');
 const form = document.querySelector('.form');
+const list = document.querySelector('.books');
+const cont = document.querySelector('.contact')
 
 class BookList {
   constructor() {
@@ -72,4 +74,29 @@ if (savedBooks) {
 form.addEventListener('submit', (e) => {
   e.preventDefault();
   allBooks.addBooks();
+});
+
+
+let formNav = document.querySelector('.form-menu');
+
+formNav.addEventListener('click', () => {
+  form.classList.add('active');
+  list.classList.remove('active');
+  cont.classList.remove('active');
+});
+
+let listNav = document.querySelector('.list-menu');
+
+listNav.addEventListener('click', () => {
+  list.classList.add('active');
+  form.classList.remove('active');
+  cont.classList.remove('active');
+});
+
+let contactNav = document.querySelector('.contact-menu');
+
+contactNav.addEventListener('click', () => {
+  cont.classList.add('active');
+  list.classList.remove('active');
+  form.classList.remove('active');
 });

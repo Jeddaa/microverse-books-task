@@ -11,25 +11,47 @@
     <title>Awesome books</title>
   </head>
   <body>
-    <section id="books" class="books">
+    <nav>
+      <a href="">Awesome Books</a>
+      <ul>
+        <li><a href="#list-menu" data-id="list-menu" class="list-menu">List</a></li>
+        <li><a href="#form-menu" data-id="form-menu" class="form-menu">Add new</a></li>
+        <li><a href="#contact-menu" data-id="contact-menu" class="contact-menu">Contact</a></li>
+      </ul>
+    </nav>
+
+    <section id="books" class="books list-menu">
       <h1>All awesome Books</h1>
       <div class="bookList"></div>
     </section>
-    <div class="main-form">
-      <form class="form" action="#">
-        <hr>
-        <h2>Add a new Book</h2>
-        <div>
-          <input class="title" type="text" placeholder="Title" />
-        </div>
-        <div>
-          <input class="author" type="text" placeholder="Author" />
-        </div>
-        <div class="add-btn">
-          <button type="submit">Add</button>
-        </div>
-      </form>
-    </div>
+
+    <section class="form form-menu">
+      <div class="main-form">
+        <form action="#">
+          <hr>
+          <h2>Add a new Book</h2>
+          <div>
+            <input class="title" type="text" placeholder="Title" />
+          </div>
+          <div>
+            <input class="author" type="text" placeholder="Author" />
+          </div>
+          <div class="add-btn">
+            <button type="submit">Add</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="contact contact-menu">
+      <h2>Contact information</h2>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, temporibus.</p>
+      <ul>
+        <li>Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet consectetur.</li>
+      </ul>
+    </section>
     <script src="./index.js"></script>
   </body>
 </html>
